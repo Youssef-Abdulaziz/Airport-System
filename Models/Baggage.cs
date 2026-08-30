@@ -13,7 +13,7 @@ namespace Meridian_Terminal.Models
         
         public double Weight { get; private set; }
 
-        public Baggage(string baggageId, Passenger passenger, Flight flight, double weight )
+        public Baggage(string baggageId, Passenger passenger, double weight )
         {
             if (string.IsNullOrWhiteSpace(baggageId))
                 throw new ArgumentException("Baggage ID can't be empty");
