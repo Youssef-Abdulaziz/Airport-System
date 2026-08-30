@@ -12,8 +12,8 @@ namespace Meridian_Terminal.Models
     {
         public string FlightNumber { get; private set; }
         public FlightType Type { get; private set; }
-        public DateTime SchedualArrival { get; private set; }
-        public DateTime SchedualDeparture { get; private set; }
+        public DateTime ScheduledArrival { get; private set; }
+        public DateTime ScheduledDeparture { get; private set; }
         public int SeatCapacity { get; private set; }
         public FlightStatus Status { get; private set; }
 
@@ -36,8 +36,8 @@ namespace Meridian_Terminal.Models
 
             FlightNumber = flightNumber;
             Type = type;
-            SchedualArrival = schedualArrival;
-            SchedualDeparture = schedualDeparture;
+            ScheduledArrival = schedualArrival;
+            ScheduledDeparture = schedualDeparture;
             SeatCapacity = seatCapacity;
             Status = FlightStatus.Schedualed;
             AssignedGate = null;
@@ -49,8 +49,8 @@ namespace Meridian_Terminal.Models
         public IReadOnlyList<Passenger> ConfirmedPassengers => _confirmedPassengers.AsReadOnly();
         public IReadOnlyList<Passenger> StandbyList => _standbyList.AsReadOnly();
 
-        public int ConfirmedCound => _confirmedPassengers.Count;
-        public bool HasAvailableSeat => ConfirmedCound < SeatCapacity;
+        public int ConfirmedCount => _confirmedPassengers.Count;
+        public bool HasAvailableSeat => ConfirmedCount < SeatCapacity;
 
         // Here we will assign a gate to the flight
         public void AssignGate(Gate gate) 

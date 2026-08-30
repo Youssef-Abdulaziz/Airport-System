@@ -47,8 +47,8 @@ namespace Meridian_Terminal.Managers
             f.FlightNumber != flightNumber &&
             f.AssignedGate != null &&
             f.AssignedGate.GateNumber == gateNumber &&
-            f.SchedualArrival < flight.SchedualDeparture &&
-            flight.SchedualArrival < f.SchedualDeparture
+            f.ScheduledArrival < flight.ScheduledDeparture &&
+            flight.ScheduledArrival < f.ScheduledDeparture
             );
 
             if (conflict)

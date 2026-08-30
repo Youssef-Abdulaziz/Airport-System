@@ -11,6 +11,7 @@ namespace Meridian_Terminal.Enums
         Schedualed,
         Boarding,
         Delayed,
-        Cancelled
+        Cancelled,
+        Departed
     }
 }
