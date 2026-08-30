@@ -26,5 +26,22 @@ namespace Meridian_Terminal.Models
             StaffName = staffName;
             _assignments = new List<StaffAssignment>();
         }
+        public IReadOnlyList<StaffAssignment> Assignments => _assignments.AsReadOnly();
+
+        public double TotalHours
+        {
+            get
+            {
+                double total = 0;
+                foreach (var a in _assignments)
+                    total += a.Hours;
+                return total;
+            }
+        }
+
+        public void AddAssignment(StaffAssignment assignment)
+        {
+            _assignments.Add(assignment ?? throw new ArgumentNullException(nameof(assignment)));
+        }
     }
 }
