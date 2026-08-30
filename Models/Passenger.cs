@@ -13,12 +13,12 @@ namespace Meridian_Terminal.Models
     {
         public string PassengerId { get; private set; }
         public string PassengerName { get; private set; }
-        public PassengarCategory Category { get; private set;}
+        public PassengerCategory Category { get; private set;}
         public Flight Flight { get; private set; }
         public Flight? ConnectingFlight { get; private set;} // might be null becasue not all passengers are going to connect
         public BookingStatus BookingStatus { get; private set; }
 
-        public Passenger (string passengerId,string name, PassengarCategory category, Flight flight, Flight? connectingFlight = null ) 
+        public Passenger (string passengerId,string name, PassengerCategory category, Flight flight, Flight? connectingFlight = null ) 
         {
             // quick check ups on the id and the name inputs to not be empty
             if(string.IsNullOrWhiteSpace(passengerId))

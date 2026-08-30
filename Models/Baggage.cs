@@ -11,7 +11,7 @@ namespace Meridian_Terminal.Models
         public string BaggageId { get; private set; }
         public Passenger Passenger { get; private set; }
         
-        public double Weight { get; private set; }
+        public double WeightKg { get; private set; }
 
         public Baggage(string baggageId, Passenger passenger, double weight )
         {
@@ -22,7 +22,7 @@ namespace Meridian_Terminal.Models
 
             BaggageId = baggageId;
             Passenger = passenger ?? throw new ArgumentNullException(nameof(passenger));
-            Weight = weight;
+            WeightKg = weight;
         }
     }
 }

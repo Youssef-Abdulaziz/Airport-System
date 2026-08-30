@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meridian Terminal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffe666bcb392ea032a5c762633f8115b12c5fbe3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc749e0bd0af7c79d83e9a655e1224b58784a397")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meridian Terminal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meridian Terminal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
