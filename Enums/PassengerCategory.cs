@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Meridian_Terminal.Enums
 {
-    public enum PassengarCategory
+    public enum PassengerCategory
     {
         Standard,
         VIP,

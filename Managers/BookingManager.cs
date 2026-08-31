@@ -14,7 +14,7 @@ namespace Meridian_Terminal.Managers
         private const int MinConnectionTime = 45;
         private const int StandbyCapacity = 10;
 
-        public BookingManager(Flight flight, Passenger passenger) 
+        public void BookPassenger(Flight flight, Passenger passenger) 
         {
             if (flight.Status == FlightStatus.Departed || flight.Status == FlightStatus.Cancelled)
                 throw new InvalidOperationException($"Can't book on a flight {flight.FlightNumber} becasue its status is {flight.Status}");
@@ -35,7 +35,7 @@ namespace Meridian_Terminal.Managers
             }
         }
 
-        public void CancelBooking(Flight flight, Passenger passenger) 
+        public Passenger? CancelBooking(Flight flight, Passenger passenger) 
         {
             if (passenger.BookingStatus != BookingStatus.Confirmed)
                 throw new InvalidOperationException($"Passenger {passenger.PassengerId} does not have a confirmed booking to cancel");
@@ -46,6 +46,7 @@ namespace Meridian_Terminal.Managers
             Passenger? promoted = flight.PromoteEarliestStandby();
             if(promoted != null)
                 promoted.SetBookingStatus(BookingStatus.Confirmed);
+            return promoted;
         }
 
         public (bool elibible, string reason) CheckBoardingEligibility(Passenger passenger, Flight nextFlight) 

@@ -1,0 +1,15 @@
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.AssemblyInfoInputs.cache
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.AssemblyInfo.cs
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.csproj.CoreCompileInputs.cache
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.sourcelink.json
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\bin\Debug\net8.0\Meridian Terminal.exe
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\bin\Debug\net8.0\Meridian Terminal.deps.json
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\bin\Debug\net8.0\Meridian Terminal.runtimeconfig.json
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\bin\Debug\net8.0\Meridian Terminal.dll
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\bin\Debug\net8.0\Meridian Terminal.pdb
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.dll
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\refint\Meridian Terminal.dll
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.pdb
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\Meridian Terminal.genruntimeconfig.cache
+C:\Users\YOUSEF\Documents\Dalil Training\Meridian Terminal\Meridian Terminal\obj\Debug\net8.0\ref\Meridian Terminal.dll

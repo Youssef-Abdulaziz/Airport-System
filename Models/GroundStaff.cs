@@ -19,7 +19,7 @@ namespace Meridian_Terminal.Models
             if (string.IsNullOrWhiteSpace(staffId))
                 throw new ArgumentException("Staff ID cannot be empty.");
 
-            if (string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(staffName))
                 throw new ArgumentException("Staff name cannot be empty.");
 
             StaffId = staffId;
