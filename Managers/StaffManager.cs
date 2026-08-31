@@ -10,7 +10,7 @@ namespace Meridian_Terminal.Managers
 {
     public class StaffManager
     {
-        private const double MaxDutyHours = 0;
+        private const double MaxDutyHours = 8;
         private readonly List<GroundStaff> _staff;
         public StaffManager(List<GroundStaff> staff )
         {
@@ -29,6 +29,10 @@ namespace Meridian_Terminal.Managers
         }
         public void AssignStaffToFlight(string staffId, Flight flight, double hours) 
         {
+            if (flight.Status == FlightStatus.Departed || flight.Status == FlightStatus.Cancelled)
+                throw new InvalidOperationException(
+                    $"Cannot assign staff to flight {flight.FlightNumber} because its status is {flight.Status}.");
+
             GroundStaff staff = _staff.FirstOrDefault(s => s.StaffId == staffId)
                 ?? throw new InvalidOperationException($"Staff with ID: {staffId} not found");
 

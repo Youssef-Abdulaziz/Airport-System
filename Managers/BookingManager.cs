@@ -31,7 +31,7 @@ namespace Meridian_Terminal.Managers
                 
                 
                 flight.AddToStandby(passenger);
-                passenger.SetBookingStatus(BookingStatus.Confirmed);
+                passenger.SetBookingStatus(BookingStatus.Standby);
             }
         }
 

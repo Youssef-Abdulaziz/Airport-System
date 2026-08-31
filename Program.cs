@@ -5,9 +5,9 @@ using Meridian_Terminal.Models;
 using System.Diagnostics.Metrics;
 using System.Linq;
 
-namespace Meridian_Terminal 
+namespace Meridian_Terminal
 {
-    public class program
+    public class Program
     {
 
         private static readonly List<Flight> _flights = new List<Flight>();
@@ -43,7 +43,8 @@ namespace Meridian_Terminal
                         case "5": RegisterBaggage(); break;
                         case "6": ManageBookings(); break;
                         case "7": AssignStaff(); break;
-                        case "8": running = false; break;
+                        case "8": UpdateFlightStatus(); break;
+                        case "9": running = false; break;
                         default: Console.WriteLine("Invalid option, try again."); break;
                     }
                 }
@@ -65,7 +66,8 @@ namespace Meridian_Terminal
             Console.WriteLine("5. Register Baggage");
             Console.WriteLine("6. Manage Bookings & Standby");
             Console.WriteLine("7. Assign Staff");
-            Console.WriteLine("8. Exit");
+            Console.WriteLine("8. Update Flight Status");
+            Console.WriteLine("9. Exit");
             Console.Write("Select an option: ");
         }
         private static void SeedGates()
@@ -291,6 +293,30 @@ namespace Meridian_Terminal
 
             Console.WriteLine("Result: STAFF ASSIGNED");
             Console.WriteLine($"Staff {staffId} assigned to flight {flight.FlightNumber} for {hours}h. Total duty hours: {total}h.");
+        }
+
+        // UPDATING FLIGHT STATUS
+        private static void UpdateFlightStatus()
+        {
+            Console.Write("Enter Flight Number: ");
+            string flightNumber = Console.ReadLine() ?? "";
+
+            Console.WriteLine("Select New Status: 1=Scheduled, 2=Boarding, 3=Delayed, 4=Departed, 5=Cancelled");
+            string statusInput = Console.ReadLine() ?? "";
+
+            FlightStatus newStatus = statusInput switch
+            {
+                "2" => FlightStatus.Boarding,
+                "3" => FlightStatus.Delayed,
+                "4" => FlightStatus.Departed,
+                "5" => FlightStatus.Cancelled,
+                _ => FlightStatus.Scheduled
+            };
+
+            _flightManager.UpdateFlightStatus(flightNumber, newStatus);
+
+            Console.WriteLine("Result: FLIGHT STATUS UPDATED");
+            Console.WriteLine($"Flight {flightNumber} status is now {newStatus}.");
         }
 
     }

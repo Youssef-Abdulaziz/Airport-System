@@ -8,8 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\YOUSEF\Desktop\Airport\Program.cs" Link="Program.cs" />
-  </ItemGroup>
-
 </Project>
